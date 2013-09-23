@@ -1,0 +1,87 @@
+﻿#web{width:1060px;margin:0 auto;padding:0px;margin-top:5px;overflow:hidden;background-color:white;}
+#topmost{background:url(../images/header.jpg) no-repeat left top;width:1060px;height:150px;}
+#level1{width:1060px;height:30px;background-color:#E4E4E4;font-family:宋体;font-size:12px;}
+
+#main{width:1060px;font-size:13px;clear:both;background-color:#ffffff;}
+#main a{color:#313131;text-decoration:none;padding-left:5px;}
+#main a:hover{color:#F60;text-decoration:none;}
+#main .date{color:#808080;margin:0px;padding:0px;}
+#main  .more{float:right;width:20px;margin-right:10px;margin-right:20px !important;margin-top:-20px;}
+#maincenter{width:1000px;margin:0px auto;padding-top:5px;padding-bottom:1px;}
+#one{height:280px;}
+#one  .more{float:right;width:20px;margin-right:20px;margin-top:-15px;}
+/*图片新闻*/
+#picnews{float:left;width:282px;height:280px;background-color:#EDEDED;}
+#picnews .title{width:282px;height:33px;background:url(../images/picnews.jpg)  no-repeat left top;}
+.title .font{padding-top:10px;padding-left:10px;color:white;font-size:14px;font-family:宋体;color:white;}
+#picnews .flashnews{width:259px;height:210px;border:2px solid #B5B5B5;margin:0px auto;}
+
+/*新闻动态*/
+#workinfo{float:left;margin-left:13px;width:404px;height:280px;}
+#workinfo .title{width:404px;height:33px;background:url(../images/workinfo.jpg)  no-repeat left top;	}
+#workinfo #titletext{padding-top:10px;padding-left:10px;color:white;}
+#workinfo .content{width:400px;margin-left:4px;height:247px;margin-top:0px;}
+#workinfo td{border-bottom:1px solid #D2D2D2;height:24px;}
+
+/*公告通知*/
+#announce{float:left;margin-left:13px;width:281px;height:280px;background-color:#F0F3FF;}
+#announce .title{width:281px;height:33px;background:url(../images/announce.jpg)  no-repeat left top;}
+#announce #titletext{padding-top:10px;padding-left:10px;color:white;}
+#announce .content{width:272px;margin-left:10px;margin-top:10px;height:237px;}
+#announce td{height:23px;}
+/*滚动图片*/
+#two{height:139px;margin:0px;margin-top:5px;}
+#roll{height:139px;}
+#roll .rollpic{float:left;height:110px;width:960px;margin-top:2px;}
+#roll .product_text{width:143px;height:25px;line-height:20px;color:black;overflow:hidden;}
+#three{height:305px;margin-top:5px;margin-bottom:10px;}
+#three .title{float:left;width:377px;height:32px;background:url(../images/dongtai.jpg)  no-repeat left top;}
+#three #titletext{padding-top:10px;padding-left:20px;}
+
+/*友情链接*/
+#threeone{float:left;width:155px;height:300px;background-color:#F0F3FF;}
+
+
+/*科学研究和人才培养*/
+#threetwo{float:left;width:406px;height:300px;margin-left:12px;background-color:#F0F3FF;}
+#junxun{width:400px;height:208px;}
+#junxun .tabbox {width:404px;}
+#junxun .tabmenu {width:404px;height:35px;background-color:white;border-bottom:3px solid #024ed9;color:red;}
+#junxun .tabmenu ul {margin:0;padding:0;list-style-type: none;}
+#junxun .tabmenu li {  float:left; display:block; width:86px;height:34px; overflow:hidden; font-family:宋体;font-weight:bold;	font-size:14px;line-height:30px;text-align:center; display:inline; margin-left:0px;color:#07061C}
+#junxun .tabmenu li a:hover{border: 1px solid #B5B5B5; }
+#junxun .tabmenu .cli {float:left;display:block;width:86px;height:34px;overflow:hidden;border: 1px solid #B5B5B5;font-family:宋体;	font-size:14px;line-height:30px;text-align:center;display:inline; cursor:pointer;color:#07061C;}
+ #tabcontent{width:400px;height:243px;}
+#junxun ul {margin:0px;maring-top:0px;padding:5px;list-style-type: none;}
+#junxun .hidden {display:none;}
+#junxun .content{width:400px;margin-left:4px;height:247px;margin-top:0px;}
+#junxun td{border-bottom:1px solid #D2D2D2;height:24px;width:400px;}
+
+#shuoshi{width:377px;height:213px;margin-top:7px;}
+#shuoshi .content{width:355px;padding-left:20px;padding-top:10px;height:171px;border:1px solid #D2D2D2;border-top:none;overflow:hidden;}
+#shuoshi td{height:20px;}
+
+/*学术讲座和会议通知*/
+#threethree{float:left;width:406px;height:300px;margin-left:10px;background-color:#F0F3FF;}
+#dongtai{width:400px;height:208px;}
+#dongtai .tabbox {width:404px;}
+#dongtai .tabmenu {width:404px;height:35px;background-color:white;border-bottom:3px solid #024ed9;color:red;}
+#dongtai .tabmenu ul {margin:0;padding:0;list-style-type: none;}
+#dongtai .tabmenu li {  float:left; display:block; width:86px;height:34px; overflow:hidden;font-family:宋体;font-weight:bold;	font-size:14px;line-height:30px;text-align:center; display:inline; margin-left:0px;color:#07061C}
+#dongtai .tabmenu li a:hover{border: 1px solid #B5B5B5; }
+#dongtai .tabmenu .cli {float:left;display:block;width:86px;height:34px;overflow:hidden;border: 1px solid #B5B5B5;font-family:宋体;	font-size:14px;line-height:30px;text-align:center;display:inline; cursor:pointer;color:#07061C;}
+ #tabcontent{width:400px;height:243px;}
+#dongtai ul {margin:0;maring-top:0px;padding:5px;list-style-type: none;}
+#dongtai .hidden {display:none;}
+#dongtai .content{width:400px;margin-left:4px;height:247px;margin-top:0px;}
+#dongtai td{border-bottom:1px solid #D2D2D2;height:24px;}
+
+#tiyu{width:377px;height:213px;margin-top:7px;}
+#tiyu .content{width:355px;padding-left:20px;padding-top:10px;height:171px;border:1px solid #D2D2D2;border-top:none;overflow:hidden;}
+#tiyu td{height:20px;}
+
+
+#footer{float:left;width:1060px;height:96px;background-color:#3399FF;margin-top:0px;}
+#webinfo{margin:0 auto;padding-top:20px;color:white;font-size:15px;font-family:Times New Roman;text-align:center;line-height:30px;}
+#footer a{color:white;text-decoration:none;}
+#footer a:hover{text-decoration:none;}

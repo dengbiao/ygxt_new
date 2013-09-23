@@ -1,0 +1,518 @@
+/*----  common  ----*/
+*{margin: 0;padding: 0;}
+img{
+    border:none;
+}
+.row{
+    position: relative;
+    display: block;
+    clear: both;
+}
+#viewport{
+    width: 100%;
+    overflow: hidden;
+}
+#pageWrapper{
+    width: 966px;
+    margin: 0 auto;
+}
+ul,li,ol{
+    list-style: none;
+    background: none;
+}
+a{
+    text-decoration: none;
+}
+/*---- header ----*/
+.header{
+    height: 152px;
+    margin-bottom: 20px;
+    z-index: 99;
+}
+/*----  logo and search-form ----*/
+.logo{
+    position: absolute;
+    left: 0;
+    top: 60px;
+}
+.search{
+    position: absolute;
+    right: 1px;
+    top: 80px;
+}
+.search input{
+    _margin-right: 5px;
+    padding-right: 20px;
+    background: url(../images/search.jpg) right center no-repeat;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border linear .2s,box-shadow linear .2s;
+    -moz-transition: border linear .2s,box-shadow linear .2s;
+    -o-transition: border linear .2s,box-shadow linear .2s;
+    transition: border linear .2s,box-shadow linear .2s;
+    display: inline-block;
+    height: 20px;
+    padding: 4px 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #555;
+    vertical-align: middle;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    outline: none;
+}
+.search input[type="text"]:focus{
+    border-color: rgba(82, 168, 236, 0.8);
+}
+.search .btn{
+    border: none;
+    background: #013a89;
+    color: #fff;
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 4px;
+}
+/*----  top-menu  ----*/
+.top-menu{
+    height: 25px;
+    width: 100%;
+    margin-top: 5px;
+}
+.top-menu ul{
+    float: right;
+}
+.top-menu ul li.first-list{
+    border-left: 1px solid #222;
+}
+.top-menu ul li{
+    float: left;
+    border-right: 1px solid #222;
+}
+.top-menu ul li a{
+    height: 20px;
+    line-height: 20px;
+    color: #3e7691;
+    font: 14px/1.5 Georgia, Arial, Tahoma, Geneva;
+    display: inline-block;
+    padding: 0 10px;
+}
+.top-menu ul li a:hover{
+    color: #bd0a01;
+    text-decoration: underline;
+}
+
+/*----  nav-menu  ----*/
+.nav-menu{
+    position: absolute;
+    width: 100%;
+    top: 130px;
+    left: 0;
+    z-index: 99;
+}
+.nav-menu ul{
+    z-index: 99;
+}
+.nav-menu ul li{
+    float: left;
+    background: #013a89;
+    margin-right: 1px;
+}
+.nav-menu ul li.nav-menu-last{
+    margin-right: 0;
+}
+.nav-menu ul li a{
+    display: block;
+    height: 30px;
+    width: 137px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    font: 14px/2 "微软雅黑",Times NewRowman, Arial, Tahoma, Geneva;
+    z-index: 99;
+}
+.nav-menu ul li a:hover{
+    color: #FF8F00;
+}
+/*二级导航*/
+.mega-wrap {
+    background: url(../images/nav_bg.png) repeat-y;
+    border: none;
+   /* _background-image:none;
+     _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/nav_bg.png");*/
+    position: absolute;
+    left: 20px;
+    width: 926px;
+    padding: 15px 0;
+    box-shadow: 0px 1px 10px -1px #333;
+    z-index: 99;
+    display: none;
+    margin-bottom: 20px;
+}
+.mega-col {
+    width: 272px;
+    float: left;
+    padding: 0 18px;
+    border-right: 1px solid #fff;
+    z-index: 99;
+}
+.last{
+    border: none;
+}
+.mega-wrap .mega-col h5{
+   font: 14px/2 "微软雅黑",Times NewRowman, Arial, Tahoma, Geneva;
+    width: 250px;
+    display: block;
+    background: #5391C0;
+    text-align: left;
+    padding: 2px 10px;
+    color: white;
+}
+.mega-wrap .mega-col a:hover{
+    color: #000;
+    text-decoration: underline;
+}
+.mega-wrap .mega-col p{
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.mega-wrap .mega-col p a{
+    display: inline;
+    height: 20px;
+    text-align: left;
+    width: 270px;
+    font-size: 12px;
+    color: #222;
+    font-family: Georgia, Arial, Tahoma, Geneva;
+}
+/*.mega-spacer{
+    height: 39px;
+    width: 139px;
+    background: url(../images/nav_bg_h.png);
+    position: absolute;
+    top: -36px;
+    _filter:alpha(opacity=50);
+    cursor: pointer;
+}*/
+
+/*----  首页焦点图slider  -----*/
+.slider_can{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width:966px;
+    height:398px;
+    overflow:hidden;
+    position:relative;
+}
+.slider_item{
+    float:left;
+    width:966px;
+    height:398px;
+    position:relative;
+}
+.slider_item p{
+    /*background:black !important;*/
+    /*_background:none;*/
+    text-align: center;
+    left: 1px;
+    background:rgba(0,0,0,0.6);
+    width:100%;
+    height:40px;
+    line-height:40px;
+    font-size:16px;
+    padding-left:15px;
+    color:white;
+    position:absolute;
+    bottom:30px;
+    opacity:0.9;
+    filter:alpha(opacity=90);
+}
+.slider_item a{
+    display:inline-block;
+    height:100%;
+    width:100%;
+}
+.slider_item a img{
+    width:966px;
+    height:398px;
+}
+#slider_control{
+    position:absolute;
+    right:11px;
+    bottom:11px;
+}
+#slider_control i{
+    display:inline-block;
+    height:15px;
+    width:15px;
+    border-radius:8px;
+    /*background-color:#b0b0b0;*/
+    background-image: url(../images/slider_control.png) !important;
+    background-image: url(../images/slider_control.gif);
+    background-position: 0 0;
+}
+#slider_control i:hover,
+#slider_control i:focus,
+#slider_control i.now{
+    background-position: -15px 0px;
+}
+#slider_control_left,
+#slider_control_right{
+    width: 61px;
+    height: 61px;
+    position:absolute;
+    top:160px;
+}
+#slider_control_left{
+    left: -40px;
+}
+#slider_control_right{
+    right: -40px;
+}
+#slider_control_right a,#slider_control_left a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    filter:alpha(opacity=90);
+}
+#slider_control_right a:hover,#slider_control_left a:hover{
+    opacity: 1;
+    filter:alpha(opacity=100);
+}
+#slider_control_left a{
+    background: url(../images/homeslide-prev.png);
+}
+#slider_control_right a{
+    background: url(../images/homeslide-next.png);
+}
+
+/*---- main content ----*/
+.aside{
+    height: 520px;
+    margin-bottom: 20px;
+    font-family: verdana,"Microsoft Yahei","Microsoft Jhenghei",STHeiti,PMingLiU,Simsun;
+}
+h1,h2,h3{
+    color: #013a89;
+    font-weight: normal;
+    font-family: "微软雅黑","黑体";
+}
+.aside h2{
+    margin-top: 20px;
+    font-size: 26px;
+}
+.aside h3{
+    text-indent: 1em;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+div.h-desc{
+    height: 20px;
+    line-height: 20px; 
+    border-bottom: 1px solid #013a89;
+    margin-bottom: 10px;
+}
+.h-desc span{
+    float: left;
+    font-size: 12px;
+    display: block;
+}
+.h-desc a{
+    color: #013a89;
+    float: right;
+    display: block;
+    font-size: 12px;
+}
+.aside p{
+    font-size: 12px;
+    text-indent: 2em;
+    margin-top: 10px;
+    line-height: 22px;
+    font-family: Georgia, Arial, Tahoma, Geneva;
+}
+
+
+.grid-top{
+    height: 300px;
+}
+
+/*学院动态*/
+.collegeNews{
+    background: #f0f0f0;
+    width: 608px;
+    padding: 0 16px;
+    float: left;
+    border-top: 3px solid #656565;
+}
+.news-row{
+    height: 97px;
+    margin-bottom: 5px;
+}
+.news-row h4{
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: normal;
+}
+.news-row a{
+    color: #222;
+}
+.news-row a:hover{
+    color: #bd0a01;
+}
+.news-row a.show{
+    float: left;
+    display: block;
+    width: 130px;
+    height: 97px;
+    margin-right: 10px;
+}
+.news-row .show:hover{
+    -webkit-box-shadow: 0 0 1px 1px rgba(50,50,50,0.5);
+    -moz-box-shadow: 0 0 1px 1px rgba(50,50,50,0.5);
+    box-shadow: 0 0 1px 1px rgba(50,50,50,0.5);
+}
+.news-row p{
+    font-size: 12px;
+    color: #666;
+}
+.news-row img{
+    width: 100%;
+    height: 100%;
+}
+/*校长寄语*/
+.presidentMsg{
+    width: 294px;
+    float: right;
+    border-top: 3px solid #124892;
+    /*border: 1px solid red;*/
+}
+.presidentMsg img{
+    width: 116px;
+    height: 80px;
+    display: block;
+    float: left;
+    /*margin-right: 20px;*/
+}
+/*三格*/
+.grid-aside{
+    width: 294px;
+    height: 244px;
+    border-top: 3px solid #124892;
+    position: relative;
+    border-top: none;
+    margin-bottom: 50px;
+    _margin-bottom: 20px;
+}
+.left,.center{
+    float: left;
+}
+.left{
+    margin-left: 17px;
+}
+.center{
+    margin-left: 37px;
+}
+.right{
+    float: right;
+}
+
+.left-img,.left-img img{
+    position: relative;
+    width: 294px;
+    height: 188px;
+}
+.left-img img{
+    position: absolute;
+}
+.video-mask{
+    display: block;
+    position: absolute;
+    width: 294px;
+    height: 188px;
+    background: #000;
+    opacity: 0;
+    filter:alpha(opacity=0);
+    cursor: pointer;
+}
+.video-mask:hover{
+    opacity: 0.5;
+    filter:alpha(opacity=50);
+}
+
+.center ul{
+    padding-top: 10px;
+    position: relative;
+}
+.center ul li{
+    font-family: Georgia, Arial, Tahoma, Geneva;
+    height: 50px;
+    line-height: 25px;
+}
+.center ul li span{
+    display: inline-block;
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 15px;
+    _margin-right: 10px;
+}
+.center ul li a{
+    color: #666;
+    font-size: 12px;
+}
+.center ul li a:hover{
+    color: #bd0a01;
+}
+.right a.fl{
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+.right img{
+    width: 92px;
+    height: 70px;
+}
+.right p{
+    padding-top: 5px;
+    line-height: 24px;
+    color: #666;
+}
+.right p a{
+    color: #333;
+}
+.right p a:hover{
+    color: #bd0a01;
+    text-decoration: underline;
+}
+
+/*footer*/
+.footer{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.bg{
+    background: url(../images/nav_bg_h.png);
+    _filter: alpha(opacity=90);
+}
+.selected{
+    color:#FF8F00 !important;
+}

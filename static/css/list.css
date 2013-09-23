@@ -1,0 +1,154 @@
+.list-can{
+    margin-top:25px;
+    overflow-y: auto;
+    margin-bottom: 50px;
+    _margin-bottom:20px;
+}
+.list-menu{
+    float:left;
+    width:200px;
+    font-family: verdana,"Microsoft Yahei","Microsoft Jhenghei",STHeiti,PMingLiU,Simsun;
+}
+.list-menu-entry{
+    text-align:center;
+    margin-top:6px;
+}
+
+.list-menu-entry a{
+    background:#eee;
+    height:35px;
+    line-height:35px;
+    display:inline-block;
+    height:100%;
+    width:100%;
+    border-radius:3px;
+    color: #023b8a;
+}
+.list-menu-entry.current a,
+.list-menu-entry a:hover,
+.list-menu-entry a:focus{
+    color:#fff;
+    background: #4caf31;
+    -moz-transition:    all .3s linear;
+    -ms-transition:     all .3s linear;
+    -o-transition:      all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition:         all .3s linear;
+}
+.article-list{
+    float: right;
+    width: 750px;
+}
+.article-list .location{
+    height:35px;
+    line-height:35px;
+    border-bottom: 3px solid #1e1e99;
+    font-size:14px;
+    font-style:normal;
+    color: #5d5d5d;
+    font-family:'DejaVu Sans',Arial, sans-serif,'w黑体';
+}
+.article-list .list-entry{
+    _height:135px;
+    overflow: auto !important;
+    overflow: hidden;
+    padding-top:20px;
+    padding-bottom:20px;
+    border-bottom:1px solid #1e1e99;
+}
+.article-list .list-entry .article-title{
+    font-family:'DejaVu Sans',Arial, sans-serif,'宋体';
+    line-height:25px;
+    font-size:14px;
+    margin-bottom: 10px;
+}
+.article-list .article-title a{
+    color: #003b8b;
+}
+.article-list .list-entry .thumb{
+    float:left;
+}
+.article-list .details{
+    width: 600px;
+    float:left;
+    padding-left:10px;
+    font-size:13px;
+}
+.article-list .details .overview{
+    display:inline-block;
+    text-indent:2em;
+    color: black;
+    line-height: 22px;
+    font-family:'DejaVu Sans',Arial, sans-serif,'宋体';
+}
+.article-list .details .overview:hover,
+.article-list .details .overview:focus{
+    text-decoration: underline;
+}
+.article-list .overview span{
+    color:#1e1e99;
+}
+.article-list .details .detail-entry{
+    color:#777;
+}
+
+
+.mega-wrap{
+    background-color: #fff; 
+}
+
+/*third.html*/
+h3{
+    margin-top: 20px;
+    line-height: 50px;
+    text-align: center;
+}
+.hd{
+    padding-bottom: 1px;
+    position: relative;
+    display: block;
+    color: #666;
+    zoom:1;
+    margin-bottom: 20px;
+}
+.article-info{
+    width: 450px;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 auto;
+    text-align: center;
+}
+.article-info span{
+    font: 12px/1.75 "宋体","Arial",sans-serif;
+    margin-left: 20px;
+    text-align: center;
+}
+.article-main p{
+    text-indent: 2em;
+    font-size: 14px;
+    line-height: 25px;
+    margin: 5px 0;
+}
+
+div.child-item{
+    display: none;
+    text-align: center;
+    margin: 5px 0 10px 0;
+}
+.list-menu-entry div.child-item a{
+    display: inline;
+    font-family: "宋体";
+    font-size: 12px;
+    color: #666;
+    background: #eee;
+    padding: 2px 5px;
+}
+div.child-item a:hover,div.child-item a:focus{
+    color:#fff;
+    background: #4caf31;
+    -moz-transition:    all .3s linear;
+    -ms-transition:     all .3s linear;
+    -o-transition:      all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition:         all .3s linear;
+}

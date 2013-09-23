@@ -1,0 +1,30 @@
+#subcenter{background-color:#fff;width:1016px;margin:10px auto;}
+#subcenter .title .font{color:white;font-size:16px;font-family:宋体;font-weight:600;}
+#subcenter .tubiao{float:left;margin-left:7px;margin-top:8px;margin-right:3px;width:19px;height:18px;background:url(../images/05.png) no-repeat left center;}
+#subleft{float:left;width:285px;}
+#part{width:285px;border:2px solid #C7C7C8;}
+#part td{border-bottom:2px solid #D2D2D2;height:30px;font-size:15px;}
+
+#lastestnews{width:285px;border:2px solid #C7C7C8;margin-top:15px;}
+#lastestnews td{height:25px;}
+
+#subleft .title{width:285px;height:37px;background-color:#4397DF;}
+
+#subright{width:715px;border:2px solid #C7C7C8;float:right;}
+
+#subright .title{width:715px;height:37px;background-color:#74BCF9;}
+#subright .content{width:715px;}
+#subright .contentin{margin-left:20px;margin-top:10px;}
+#subright .newstitle{height:35px;margin-top:10px;font-size:22px;font-weight:bold;text-align:center;font-family:宋体;line-height:30px;color:#326EBB;}
+#subright .tips{width:680px;margin:0px auto;padding-bottom:10px;font-size:12px;text-align:center;border-bottom:2px solid #C7C7C7;}
+#subright .newscontent{width:695px;text-align:left;margin:10px 10px;overflow:hidden;}
+.pagination{margin-top:20px;width:695px;height:30px;font-size:14px;}
+.results{width:200px;}
+.pager{float:right;margin-right:5px;margin-top:-10px;}
+#subright td{border-bottom:2px dotted  #D2D2D2;height:25px;font-size:15px;}
+
+.page {border-top:1px solid #dfdfdf; padding-top: 10px; text-align: left; margin-bottom: 10px; font-size: 14px;}
+.page a {margin: 0 5px 0 0; padding: 3px 6px; border: 1px solid #D1D1D1;}
+.page .current{margin: 0 5px 0 0; padding: 3px 6px; border: 1px solid #A4A4A4; background:#EBEBEB; }
+.page a { color:#333; text-decoration:none;}
+.page a:hover {border-color:#AAA !important; background:#FAFAFA; color: #000 !important; text-decoration:underline;}
