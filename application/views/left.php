@@ -10,7 +10,7 @@
             <div id="menu">
                 <h6 id="h-menu-products" class="selected"><span>栏目管理</span></h6>
                 <ul id="menu-events" class="opened">
-                <li><a href="<?php echo site_url() ?>/admin/bottom" target="right">学院概况</a></li>
+                <li><a href="<?php echo site_url() ?>/checkSalary" target="right">工资考核</a></li>
                 <li><a href="<?php echo site_url() ?>/admin/right" target="right">教育教学</a></li>
                     <li><a href="">科学研究</a></li>
                     <li><a href="">学生风采</a></li>
