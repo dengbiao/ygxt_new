@@ -10,6 +10,11 @@
 #maincenter{width:1000px;margin:0px auto;padding-top:5px;padding-bottom:1px;}
 #one{height:280px;}
 #one  .more{float:right;width:20px;margin-right:20px;margin-top:-15px;}
+
+
+
+
+
 /*图片新闻*/
 #picnews{float:left;width:282px;height:280px;background-color:#EDEDED;}
 #picnews .title{width:282px;height:33px;background:url(../images/picnews.jpg)  no-repeat left top;}
