@@ -37,15 +37,7 @@
                 <div class="title">
                     <h5>工资考核</h5>
                     <div class="search">
-                        <form action="" method="post">
-                            <div class="input">
-                                <span style="font-weight:bold;">输入用户名:</span>
-                                <input type="text" id="info" name="info" />
-                            </div>
-                            <div class="button">
-                                <input type="submit" name="submit" value="查 询" style="height:23px;width:50px;"/>
-                            </div>
-                        </form>
+                        2013年9月份
                     </div>
                 </div>
                 <!-- end box / title -->
@@ -54,119 +46,57 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>姓名</th>
-                                <th>学号</th>
-                                <th>性别</th>
-                                <th>专业</th>
-                                <th>年级</th>
-                                <th>校园卡号</th>
-                                <th>工资</th>
-                                <th>备注</th>
-                                <th>操作</th>
+                                <th>姓名</th><th>学号</th><th>性别</th><th>专业</th>
+                                <th>年级</th><th>校园卡号</th><th>工资</th><th>备注</th><th>操作</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr align="center">
-                                <!-- <td class="selected last"><input type="checkbox" /></td> -->
-                                <td>邓彪</td>
-                                <td>124611157</td>
-                                <td>男</td>
-                                <td>计算机科学与技术</td>
-                                <td>2012</td>
-                                <td>108830</td>
-                                <td>2000</td>
-                                <td>给多点，干活认真</td>
+
+
+                        <?php foreach($salaryList as $key => $salary ) { ?>
+                                <!--//不考核 -->
+                        <?php       if($salary['status'] == 0) { ?>
+                                        <tr align="center" class="out">
+                        <?php       }else {?> 
+                                        <tr align="center" >
+                        <?php }?> 
+                                <td><?=$salary['name']?></td>
+                                <td><?=$salary['stuno']?></td>
+                                <td><?=$salary['sex']?></td>
+                                <td><?=$salary['college']?></td>
+                                <td><?=$salary['grade']?></td>
+                                <td><?=$salary['stuCard']?></td>
+                        <?php if($salary['status'] == 0) {?>
+                                <td ><input type="text" value="0" disabled="true"/></td>
+                        <?php }else {?> 
+                                <td><input type="text" value="<?=$salary['salary']?>"/></td>
+                        <?php }?> 
+                                <td><?=$salary['remark']?></td>
                                 <td>										
-                                    <a href="">修改</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                                    <a href="">删除</a>
+                        <?php if($salary['status'] != 0) {?>
+                                    <a href="">加入考核</a>
+                        <?php }else {?> 
+                                    <a href="">不予考核</a>
+                        <?php }?> 
                                 </td>
                             </tr>
-
-
-                            <tr align="center">
-                                <!-- <td class="selected last"><input type="checkbox" /></td> -->
-                                <td>邓彪</td>
-                                <td>124611157</td>
-                                <td>男</td>
-                                <td>计算机科学与技术</td>
-                                <td>2012</td>
-                                <td>108830</td>
-                                <td>2000</td>
-                                <td>给多点，干活认真</td>
-                                <td>										
-                                    <a href="">修改</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                                    <a href="">删除</a>
-                                </td>
-                            </tr>
-
-                            <tr align="center">
-                                <!-- <td class="selected last"><input type="checkbox" /></td> -->
-                                <td>邓彪</td>
-                                <td>124611157</td>
-                                <td>男</td>
-                                <td>计算机科学与技术</td>
-                                <td>2012</td>
-                                <td>108830</td>
-                                <td>2000</td>
-                                <td>给多点，干活认真</td>
-                                <td>										
-                                    <a href="">修改</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                                    <a href="">删除</a>
-                                </td>
-                            </tr>
-
-
-                            <tr align="center">
-                                <!-- <td class="selected last"><input type="checkbox" /></td> -->
-                                <td>邓彪</td>
-                                <td>124611157</td>
-                                <td>男</td>
-                                <td>计算机科学与技术</td>
-                                <td>2012</td>
-                                <td>108830</td>
-                                <td>2000</td>
-                                <td>给多点，干活认真</td>
-                                <td>										
-                                    <a href="">修改</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                                    <a href="">删除</a>
-                                </td>
-                            </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                        <?php
+                          }
+                        ?>
 
                         </tbody>
                     </table>
                     <!-- pagination -->
                     <div class="pagination pagination-left">
                         <div class="results">
-                            <span>总共15条目</span>
+                        总共<span style="color:red">15</span>位员工&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;总考核工资：<span style="color:red;">14220</span>元
                         </div>
-                        <ul class="pager">
-                            <?php echo $pager?>
-                            </ul>
-                    </div>
-                    <div style="float:right">
-                        <a href="/csueye/admin/admin/toAdminAdd"><b> + 添加用户</b></a> &nbsp;&nbsp;
                     </div>
                     <!-- end pagination -->
+                        <div class="submit">
+                            <input type="submit" value="暂存数据"> 
+                            <input type="submit" value="提交数据">
+                        </div>
                     </form>
                 </div>
             </div>

@@ -935,13 +935,18 @@ div.color a.greyblue
 	content -> right -> box / search
 ----------------------------------------------------------- */ 
 
+#content div.box div.title h5
+{
+    display:inline-block;
+}
+
 #content div.box div.title div.search
 {
-	margin: 0;
-	padding: 6px 6px 6px 7px;
-	float: right;
+    margin: 4px 0px 0px 86px;
+    padding: 8px 6px 6px 7px;
 	background: url("../images/colors/blue/title_link.png") no-repeat top left;
 	border-left: 1px solid #316293;
+    color:white;
 }
 
 #content div.box div.title div.search div.input
@@ -952,7 +957,7 @@ div.color a.greyblue
 #content div.box div.title div.search div.input input
 {
 	margin: 0;
-	padding: 5px 7px 4px 7px;
+	padding: 5px 7px 4px 15px;
 	background: #FFFFFF;
 	border: 1px solid #316293;
 	color: #000000;
@@ -2011,10 +2016,14 @@ div.form div.fields div.buttons div.highlight .ui-state-hover
 	margin: 0;	
 }
 
+
+#content div.box table tr.out{
+    background-color: #CECECE;
+}
+
 #content div.box table td
 {
-	padding: 10px;
-	background: #ffffff;
+	padding: 4px;
 	border-right: 1px solid #cdcdcd;
 	border-bottom: 1px solid #cdcdcd;
 }
@@ -2154,11 +2163,12 @@ div.form div.fields div.buttons div.highlight .ui-state-hover
 
 #content div.box div.pagination
 {
-	margin: 10px 0 0 0;
-	padding: 0;
+    margin: 10px 0 0px 0;
+    padding: 0px 0px 15px 0px;
 	height: 1%;
 	clear: both;
 	overflow: hidden;
+    border-bottom: 2px solid #cccccc;
 }
 
 #content div.box div.pagination div.results
@@ -2253,6 +2263,16 @@ div.form div.fields div.buttons div.highlight .ui-state-hover
 	border-bottom: 1px solid #afafaf;
 }
 
+
+#content div.box div.submit {
+    margin-top:10px;
+}
+
+#content div.box div.submit input {
+    width:100px;
+    height:35px;
+    margin-right:20px;
+}
 /* -----------------------------------------------------------
 	content -> right -> sales chart
 ----------------------------------------------------------- */

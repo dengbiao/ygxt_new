@@ -6,3 +6,11 @@ body {
 #content div.box table {
     border: #d0d0d0 1px solid;
 }
+
+#content div.box div.pagination div.results span {
+    color: red;
+    display: inline-block;
+    border: 0px solid;
+    background: #ffffff;
+    float: none;
+}
