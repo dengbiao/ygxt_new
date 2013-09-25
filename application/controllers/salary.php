@@ -18,7 +18,13 @@ class Salary extends CI_Controller {
         $sum = $this->salary->getSalarySumByDepartmentID(1);
         $data['count'] = $sum['c'];
         $data['sum'] = $sum['s'];
-        $this->load->view('salary_check',$data);
+
+        $maxStatus = $this->testStatus();
+        if($maxStatus > 1 ) {
+            $this->load->view('salary_check_read',$data);
+        }else {
+            $this->load->view('salary_check',$data);
+        }
 	}
 
     public function statistics()
@@ -50,6 +56,66 @@ class Salary extends CI_Controller {
         $data['total_num']=$config['total_rows'];
         //echo $salaryList;
         $this->load->view('salary_history',$data);    
+    }
+
+
+    public function changeStatus($stuno, $status) {
+        if( $status == 0 ){
+            //加入考核
+            $status = 1;
+        }else {
+            $status = 0;
+        }
+        $data['status'] = $status;
+        $this->salary->updateSingleSalary($data, $stuno); 
+        redirect('/salary/check', 'refresh');
+    }
+
+    public function testStatus() {
+        $result = $this->salary->hasSubmit();
+        return $result->status;
+    }
+
+    public function handle() {
+        if(isset($_POST['save'])) {
+            //handle save event
+            $size = sizeof($this->input->post('stunos'));
+            $stunos = $this->input->post('stunos');
+            $salary = $this->input->post('salary');
+            $remark = $this->input->post('remark');
+
+            
+            $resultArray = array();
+            $fields= array("stuno","salary","remark");
+            for($i=0;$i<$size;$i++) {
+                $row = array($stunos[$i],$salary[$i],$remark[$i]);
+                $r = array_combine($fields,$row);
+                $resultArray[] = $r;
+            }
+            //print_r($resultArray);
+            $this->salary->updateSalary($resultArray, 'stuno');
+            redirect('/salary/check', 'refresh');
+        } 
+        if(isset($_POST['submit'])) {
+            //handle submit event
+            $size = sizeof($this->input->post('stunos'));
+            $stunos = $this->input->post('stunos');
+            $salary = $this->input->post('salary');
+            $remark = $this->input->post('remark');
+
+            
+            $resultArray = array();
+            $fields= array("stuno","salary","status","remark");
+            for($i=0;$i<$size;$i++) {
+                $row = array($stunos[$i],$salary[$i],2,$remark[$i]);
+                $r = array_combine($fields,$row);
+                $resultArray[] = $r;
+            }
+            //print_r($resultArray);
+            $this->salary->updateSalary($resultArray, 'stuno');
+            redirect('/salary/check', 'refresh');
+        }
+
     }
 }
 

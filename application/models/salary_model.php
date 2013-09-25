@@ -36,9 +36,18 @@ class Salary_model extends CI_Model{
         return $query->result_array();
     }
 
-    function updateSalary($id,$data){
-        $this->db->where('id',$id);
-        return $this->db->update($this->table, $data); 
+    function hasSubmit() {
+        $this->db->select_max('status');
+        $query = $this->db->get($this->table);
+        return $query-> row();
+    }
+
+    function updateSalary($data,$title) {
+        $this->db->update_batch($this->table,$data,$title);        
+    }
+
+    function updateSingleSalary($data,$stuno) {
+        $this->db->update($this->table, $data, array('stuno' => $stuno));
     }
 
     function delSalary($data){

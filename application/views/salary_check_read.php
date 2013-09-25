@@ -37,7 +37,7 @@
                 <div class="title">
                     <h5>工资考核</h5>
                     <div class="search">
-                        2013年9月份
+                        2013年9月份   <span style="color:red;">(已完成)</span>
                     </div>
                 </div>
                 <!-- end box / title -->
@@ -55,56 +55,35 @@
 
                         <?php foreach($salaryList as $key => $salary ) { ?>
                                 <!--//不考核 -->
-                        <?php       if($salary['status'] == 0) { ?>
-                                        <tr align="center" class="out">
-                        <?php       }else {?> 
+                        <?php       if($salary['status'] == 0) { 
+                                        continue;
+                                    }else {?> 
                                         <tr align="center" >
                         <?php       }?> 
                                 <td><?=$salary['name']?></td>
-                                <td>
-                                    <?=$salary['stuno']?>
-                                </td>
-                                
+                                <td><?=$salary['stuno']?></td>
                                 <td><?=$salary['sex']?></td>
                                 <td><?=$salary['college']?></td>
                                 <td><?=$salary['grade']?></td>
                                 <td><?=$salary['stuCard']?></td>
-                        <?php   if($salary['status'] == 0) {?>
-                                    <td ><input type="text" name="salary[]" value="0" disabled="true"/></td>
-                                    <td><input type="text" name="remark[]" value="<?=$salary['remark']?>" disabled="true"/></td>
-                                    <input type="hidden" name="stunos[]" value="<?=$salary['stuno']?>" disabled="true">
-                        <?php   }elseif($salary['status'] == 1) {?> 
-                                    <td><input type="text" name="salary[]" value="<?=$salary['salary']?>"/></td>
-                                    <td><input type="text" name="remark[]" value="<?=$salary['remark']?>"/></td>
-                                    <input type="hidden" name="stunos[]" value="<?=$salary['stuno']?>" >
-                        <?php   }?> 
-                                <td>										
-                        <?php   if($salary['status'] == 0) {?>
-                                    <a href="<?php site_url()?>/salary/changeStatus/<?=$salary['stuno']?>/<?=$salary['status']?>">加入考核</a>
-                        <?php   }elseif($salary['status'] == 1) {?> 
-                                    <a href="<?php site_url()?>/salary/changeStatus/<?=$salary['stuno']?>/<?=$salary['status']?>">不予考核</a>
-                        <?php   }?> 
-                                </td>
+                                <td><?=$salary['salary']?></td>
+                                <td><?=$salary['remark']?></td>
+                                <td>无操作</td>
+
                             </tr>
                         <?php }?>
 
                         </tbody>
                     </table>
                     <!-- pagination -->
-                    <div class="pagination_check pagination-left">
+                    <div class="pagination_check pagination-left" style="border:0px;">
                         <div class="results">
                         总共考核<span style="color:red"><?=$count?></span>位员工
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         总考核工资：<span style="color:red;"><?=$sum?></span>元
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <span style="color:red;">*</span>注：红色背景栏员工不参与本月考核。 
                         </div>
                     </div>
                     <!-- end pagination -->
-                        <div class="submit">
-                            <input type="submit" name="save" value="暂存数据"> 
-                            <input type="submit" name="submit" value="提交数据" onclick="return alert('确认提交吗？');">
-                        </div>
                     </form>
                 </div>
             </div>

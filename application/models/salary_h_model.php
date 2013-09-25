@@ -39,10 +39,10 @@ class Salary_h_model extends CI_Model{
         return $query->num_rows();
     }
 
-    function updateSalary($id,$data){
-        $this->db->where('id',$id);
-        return $this->db->update($this->table, $data); 
+    function updateSalary($data,$title) {
+        $this->db->update_batch($this->table,$data,$title);        
     }
+
 
     function delSalary($data){
         return $this->db->delete($this->table,$data);
