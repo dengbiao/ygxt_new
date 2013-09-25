@@ -52,7 +52,6 @@
                         </thead>
                         <tbody>
 
-
                         <?php foreach($salaryList as $key => $salary ) { ?>
                                 <!--//不考核 -->
                         <?php       if($salary['status'] == 0) { ?>
@@ -74,7 +73,7 @@
                                     <td><input type="text" name="remark[]" value="<?=$salary['remark']?>" disabled="true"/></td>
                                     <input type="hidden" name="stunos[]" value="<?=$salary['stuno']?>" disabled="true">
                         <?php   }elseif($salary['status'] == 1) {?> 
-                                    <td><input type="text" name="salary[]" value="<?=$salary['salary']?>"/></td>
+                                    <td><input type="text" name="salary[]" value="<?=$salary['salary']?>" onkeyup="value=value.replace(/[^\d]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" /></td>
                                     <td><input type="text" name="remark[]" value="<?=$salary['remark']?>"/></td>
                                     <input type="hidden" name="stunos[]" value="<?=$salary['stuno']?>" >
                         <?php   }?> 
