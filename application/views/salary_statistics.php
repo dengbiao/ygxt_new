@@ -41,7 +41,7 @@
                     <table class="statistics1">
                         <thead>
                             <tr>
-                                <td>系统发出工资总额：<span style="color:red;">153223元</span></td>
+                            <td>系统发出工资总额：<span style="color:red;"><?=$salarySum?></span>元</td>
                             </tr>
                         </thead>
                     </table>
@@ -58,8 +58,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php for($i = 2013;$i>2000;$i--) { ?> 
-                            <tr><td><?=$i?></td><td>34523元</td></tr>
+                            <?php foreach($salaryYearSum as $key => $salary) { ?> 
+                            <tr><td><?=$salary['year']?></td><td><?=$salary['yearSum']?>元</td></tr>
                             <?php } ?>
                         </tbody>
                     </table>
@@ -80,8 +80,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php for($i = 1;$i<10;$i++) { ?> 
-                            <tr><td width="50%">信息科学与工程学院</td><td width="50%">34523元</td></tr>
+                            <?php foreach($salaryDepartSum as $key => $salary) { ?> 
+                            <tr><td width="50%"><?=$salary['department']?></td><td width="50%"><?=$salary['departSum']?>元</td></tr>
                             <?php } ?>
                         </tbody>
                     </table>

@@ -38,26 +38,25 @@
                     <h5>历史数据</h5>
                 </div>
                 <div class="table">
-                    <form action="" method="post">
+                <form action="<?php echo site_url()?>/salary/history" method="post">
                     <table class="statistics1">
                         <thead>
                             <tr>
                                 <td>请选择要查询的年份和月份：
                                     年份：
-                                    <select >
-                                        <option>2013</option>
-                                        <option>2012</option>
-                                        <option>2011</option>
-                                        <option>2010</option>
-                                        <option>2009</option>
+                                    <select name="year">
+                                    <?php 
+                                        $system_year = date('Y');
+                                        for($i=$system_year;$i>=2012;$i--) { 
+                                    ?>
+                                        <option value="<?=$i?>" <?php if(isset($year) && $i==$year) echo "selected='selected'";?>><?=$i?></option>
+                                    <?php }?>
                                     </select>
                                     月份:
-                                    <select >
-                                        <option>12</option>
-                                        <option>11</option>
-                                        <option>10</option>
-                                        <option>09</option>
-                                        <option>08</option>
+                                    <select name="month">
+                                        <?php for($i=1;$i<=12;$i++) { ?>
+                                            <option value="<?=$i?>"  <?php if(isset($month) && $i==$month) echo "selected='selected'";?>><?=$i?></option>
+                                        <?php } ?>
                                     </select>
                                     <input type="submit" value="确定">
                                     &nbsp;&nbsp;<a href="">生成工资单</a>
@@ -68,10 +67,9 @@
                     </form>
                 </div>
                     
-                <div class="description"></div>
-    
                 <!-- end box / title -->
-                <div class="table">
+
+                <div class="table" <?php if(!isset($init)) echo "style='display:none;'"?> >
                     <table class="statistics">
                         <thead>
                             <tr>
@@ -84,6 +82,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php if(isset($init)){ ?>
                             <?php foreach($salaryList as $key => $salary ){ ?> 
                             <tr>
                                 <td><?=$salary['name']?></td>
@@ -117,20 +116,11 @@
                                 <td><?=$salary['department']?>
                                 </td>
                             </tr>
-                            <?php } ?>
+                            <?php }?>
+                            <?php }?>
                         </tbody>
                     </table>
-                    </table>
-                    <div class="pagination pagination-left">
-                            <div class="results">
-                            <span>总共<?php echo $total_num;?>条记录</span>
-                        </div>
-                        <ul class="pager">
-                            <?php echo $pager?>
-                        </ul>
-                    </div>
                 </div>
-
             </div>
         </div>
         <!-- end content  -->

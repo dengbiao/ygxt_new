@@ -39,7 +39,13 @@ class Salary_model extends CI_Model{
     function hasSubmit() {
         $this->db->select_max('status');
         $query = $this->db->get($this->table);
-        return $query-> row();
+        $result = $query->row();
+        $maxStatus = $result->status;
+        if($maxStatus>1) {
+            return TRUE;
+        }else {
+            return FALSE;
+        }
     }
 
     function updateSalary($data,$title) {

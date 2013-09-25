@@ -18,9 +18,7 @@ class Salary extends CI_Controller {
         $sum = $this->salary->getSalarySumByDepartmentID(1);
         $data['count'] = $sum['c'];
         $data['sum'] = $sum['s'];
-
-        $maxStatus = $this->testStatus();
-        if($maxStatus > 1 ) {
+        if($this->salary->hasSubmit() ){ 
             $this->load->view('salary_check_read',$data);
         }else {
             $this->load->view('salary_check',$data);
@@ -30,31 +28,26 @@ class Salary extends CI_Controller {
     public function statistics()
     {
         //echo "statistics";
-        $this->load->view('salary_statistics');
+        $data['salarySum']=$this->salary_h->getSalarySum();
+        $data['salaryYearSum']=$this->salary_h->getSalaryYearSum();
+        //print_r($data['salaryYearSum']);
+        $data['salaryDepartSum']=$this->salary_h->getSalaryDepartSum();
+        $this->load->view('salary_statistics',$data);
     }
 
     public function history()
     {
         //echo "history";
-        $sid = $this->uri->segment(3);
-        $this->load->library('pagination');    
-        $config['base_url'] = site_url("salary/history");
-        $config['total_rows'] = $this->salary_h->getSalaryNum();
-        $config['per_page'] = 13; 
-        $config['use_page_numbers'] = TRUE;
-        $config['uri_segment'] = 3;
-        $pageNum=$this->uri->segment(3)?$this->uri->segment(3):1;
-        $pageNum==1 ? $offset=0 : $offset=$config['per_page']*($pageNum-1);
-
-        $salaryList=$this->salary_h->getSalaryList($config['per_page'],$offset);
-        
-        $this->pagination->initialize($config); 
-        $pager=$this->pagination->create_links();
-
-        $data['pager']=$pager;
-        $data['salaryList']=$salaryList;
-        $data['total_num']=$config['total_rows'];
-        //echo $salaryList;
+        $year = $this->input->post('year');
+        $month = $this->input->post('month');
+        $data['flag'] = 1;
+        if($year) {
+            $data['init'] = false;
+            $data['year'] = $year;
+            $data['month'] = $month;
+            $salaryList=$this->salary_h->getSalaryListByDate($year,$month);
+            $data['salaryList']=$salaryList;
+        }
         $this->load->view('salary_history',$data);    
     }
 
@@ -71,10 +64,6 @@ class Salary extends CI_Controller {
         redirect('/salary/check', 'refresh');
     }
 
-    public function testStatus() {
-        $result = $this->salary->hasSubmit();
-        return $result->status;
-    }
 
     public function handle() {
         if(isset($_POST['save'])) {
