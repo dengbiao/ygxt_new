@@ -2018,7 +2018,7 @@ div.form div.fields div.buttons div.highlight .ui-state-hover
 
 
 #content div.box table tr.out{
-    background-color: #CECECE;
+    background-color: #F8B9B9;
 }
 
 #content div.box table td
@@ -2168,7 +2168,6 @@ div.form div.fields div.buttons div.highlight .ui-state-hover
 	height: 1%;
 	clear: both;
 	overflow: hidden;
-    border-bottom: 2px solid #cccccc;
 }
 
 #content div.box div.pagination div.results

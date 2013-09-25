@@ -1,0 +1,49 @@
+
+body {
+    margin: 0px 60px 0px 0px;
+    height:auto;
+}
+
+#content{
+    height:auto;
+}
+
+#content div.box table {
+    border: #d0d0d0 1px solid;
+}
+
+#content div.box div.pagination_check div.results span {
+    color: red;
+    display: inline-block;
+    border: 0px solid;
+    background: #ffffff;
+    float: none;
+}
+
+
+
+#content div.box div.pagination_check {
+    margin: 10px 0 0px 0;
+    padding: 10px 0px 15px 0px;
+    height: 1%;
+    clear: both;
+    overflow: hidden;
+    border-bottom: 2px solid #cccccc;
+}
+
+.description {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px 10px 0px;
+    font: 12pt bold;
+    font-family: Arial, sans-serif;
+}
+
+#content div.box table.statistics1 td {
+    padding:10px;
+}
+
+#content div.box table.statistics td {
+    padding:6px;
+    text-align: center;
+}
