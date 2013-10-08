@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+-- phpMyadmin SQL Dump
 -- version 3.4.10.1deb1
 -- http://www.phpmyadmin.net
 --
@@ -23,10 +23,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 表的结构 `Admin`
+-- 表的结构 `admin`
 --
 
-CREATE TABLE IF NOT EXISTS `Admin` (
+CREATE TABLE IF NOT EXISTS `admin` (
   `account` varchar(50) NOT NULL,
   `departmentID` int(11) NOT NULL,
   `password` varchar(200) DEFAULT NULL,
@@ -38,29 +38,29 @@ CREATE TABLE IF NOT EXISTS `Admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `Admin`
+-- 转存表中的数据 `admin`
 --
 
-INSERT INTO `Admin` (`account`, `departmentID`, `password`, `lastLoginTime`, `lastLoginIP`, `loginCount`) VALUES
+INSERT INTO `admin` (`account`, `departmentID`, `password`, `lastLoginTime`, `lastLoginIP`, `loginCount`) VALUES
 ('admin', 0, 'admin', '0000-00-00 00:00:00', '', 1);
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `Department`
+-- 表的结构 `department`
 --
 
-CREATE TABLE IF NOT EXISTS `Department` (
+CREATE TABLE IF NOT EXISTS `department` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
--- 转存表中的数据 `Department`
+-- 转存表中的数据 `department`
 --
 
-INSERT INTO `Department` (`id`, `name`) VALUES
+INSERT INTO `department` (`id`, `name`) VALUES
 (0, '党委研究生工作部'),
 (1, '研究生创新园'),
 (2, '信息科学与工程学院'),
@@ -71,10 +71,10 @@ INSERT INTO `Department` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `Salary`
+-- 表的结构 `salary`
 --
 
-CREATE TABLE IF NOT EXISTS `Salary` (
+CREATE TABLE IF NOT EXISTS `salary` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `stuno` varchar(50) NOT NULL,
   `departmentID` int(11) NOT NULL,
@@ -89,10 +89,10 @@ CREATE TABLE IF NOT EXISTS `Salary` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
--- 转存表中的数据 `Salary`
+-- 转存表中的数据 `salary`
 --
 
-INSERT INTO `Salary` (`id`, `stuno`, `departmentID`, `year`, `month`, `salary`, `status`, `remark`) VALUES
+INSERT INTO `salary` (`id`, `stuno`, `departmentID`, `year`, `month`, `salary`, `status`, `remark`) VALUES
 (1, '124611158', 1, 2013, 9, 1500, 1, '好家伙'),
 (2, '124612272', 1, 2013, 9, 3500, 1, '大傻逼'),
 (3, '124611140', 1, 2013, 9, 985, 1, ''),
@@ -101,10 +101,10 @@ INSERT INTO `Salary` (`id`, `stuno`, `departmentID`, `year`, `month`, `salary`, 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `SalaryHistory`
+-- 表的结构 `salaryhistory`
 --
 
-CREATE TABLE IF NOT EXISTS `SalaryHistory` (
+CREATE TABLE IF NOT EXISTS `salaryhistory` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `stuno` varchar(50) NOT NULL,
   `departmentID` int(11) NOT NULL,
@@ -119,10 +119,10 @@ CREATE TABLE IF NOT EXISTS `SalaryHistory` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 --
--- 转存表中的数据 `SalaryHistory`
+-- 转存表中的数据 `salaryhistory`
 --
 
-INSERT INTO `SalaryHistory` (`id`, `stuno`, `departmentID`, `year`, `month`, `salary`, `status`, `remark`) VALUES
+INSERT INTO `salaryhistory` (`id`, `stuno`, `departmentID`, `year`, `month`, `salary`, `status`, `remark`) VALUES
 (1, '124611158', 1, 2013, 9, 2000, 4, NULL),
 (2, '124612272', 0, 2013, 9, 3500, 4, '大傻逼'),
 (3, '124611158', 2, 2013, 9, 2000, 4, NULL),
@@ -145,10 +145,10 @@ INSERT INTO `SalaryHistory` (`id`, `stuno`, `departmentID`, `year`, `month`, `sa
 -- --------------------------------------------------------
 
 --
--- 表的结构 `Student`
+-- 表的结构 `student`
 --
 
-CREATE TABLE IF NOT EXISTS `Student` (
+CREATE TABLE IF NOT EXISTS `student` (
   `stuno` varchar(50) NOT NULL,
   `departmentID` int(11) NOT NULL,
   `stuCard` varchar(50) DEFAULT NULL,
@@ -165,10 +165,10 @@ CREATE TABLE IF NOT EXISTS `Student` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `Student`
+-- 转存表中的数据 `student`
 --
 
-INSERT INTO `Student` (`stuno`, `departmentID`, `stuCard`, `name`, `sex`, `degree`, `college`, `grade`, `phone`, `isWork`, `remark`) VALUES
+INSERT INTO `student` (`stuno`, `departmentID`, `stuCard`, `name`, `sex`, `degree`, `college`, `grade`, `phone`, `isWork`, `remark`) VALUES
 ('124611140', 1, '108875', '周鹏', '男', '硕士生', '信息科学与工程学院', 2012, '15367992322', 1, 'O(∩_∩)O~'),
 ('124611158', 1, '108830', '邓彪', '男', '硕士生', '信息科学与工程学院', 2012, '15367992500', 1, '好家伙'),
 ('124611159', 1, '108845', '吴尚', '男', '硕士生', '信息科学与工程学院', 2012, '13354215845', 1, '二师兄'),
@@ -179,30 +179,30 @@ INSERT INTO `Student` (`stuno`, `departmentID`, `stuCard`, `name`, `sex`, `degre
 --
 
 --
--- 限制表 `Admin`
+-- 限制表 `admin`
 --
-ALTER TABLE `Admin`
-  ADD CONSTRAINT `FK_Reference_2` FOREIGN KEY (`departmentID`) REFERENCES `Department` (`id`);
+ALTER TABLE `admin`
+  ADD CONSTRAINT `FK_Reference_2` FOREIGN KEY (`departmentID`) REFERENCES `department` (`id`);
 
 --
--- 限制表 `Salary`
+-- 限制表 `salary`
 --
-ALTER TABLE `Salary`
-  ADD CONSTRAINT `FK_Reference_3` FOREIGN KEY (`stuno`) REFERENCES `Student` (`stuno`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `FK_Reference_5` FOREIGN KEY (`departmentID`) REFERENCES `Department` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `salary`
+  ADD CONSTRAINT `FK_Reference_3` FOREIGN KEY (`stuno`) REFERENCES `student` (`stuno`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_Reference_5` FOREIGN KEY (`departmentID`) REFERENCES `department` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `SalaryHistory`
+-- 限制表 `salaryhistory`
 --
-ALTER TABLE `SalaryHistory`
-  ADD CONSTRAINT `FK_Reference_4` FOREIGN KEY (`stuno`) REFERENCES `Student` (`stuno`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `FK_Reference_6` FOREIGN KEY (`departmentID`) REFERENCES `Department` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `salaryhistory`
+  ADD CONSTRAINT `FK_Reference_4` FOREIGN KEY (`stuno`) REFERENCES `student` (`stuno`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_Reference_6` FOREIGN KEY (`departmentID`) REFERENCES `department` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `Student`
+-- 限制表 `student`
 --
-ALTER TABLE `Student`
-  ADD CONSTRAINT `FK_Reference_1` FOREIGN KEY (`departmentID`) REFERENCES `Department` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `student`
+  ADD CONSTRAINT `FK_Reference_1` FOREIGN KEY (`departmentID`) REFERENCES `department` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
