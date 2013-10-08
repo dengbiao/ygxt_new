@@ -1,7 +1,7 @@
 <?php
 class Admin_model extends CI_Model{
 
-    var $table = 'Admin';
+    var $table = 'admin';
 
     function __construct(){
         parent::__construct();

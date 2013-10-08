@@ -1,8 +1,8 @@
 <html>
     <head> 
-        <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
-        <link rel="stylesheet" type="text/css" href="/static/css/style.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="/static/css/colors/blue.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/static/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/static/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/static/css/colors/blue.css">
     </head>
 <body>
     <div id="content">

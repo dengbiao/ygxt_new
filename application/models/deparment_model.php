@@ -1,34 +1,33 @@
 <?php
-class Student_model extends CI_Model{
+class Department_model extends CI_Model{
 
-    var $table = 'student';
+    var $table = 'department';
 
     function __construct(){
         parent::__construct();
-        $this->load->database();
     }
 
-    function addStudent($data){
+    function addDepartment($data){
         return $this->db->insert($this->table,$data);
     }
 
 
-    function getStudent($data){
+    function getDepartment($data){
         $query = $this->db->get_where($this->table,$data);
         return $query->row();
     }
 
-    function getStudentList($data){
+    function getDepartmentList($data){
         $query = $this->db->get_where($this->table,$data);
         return $query->result_array();
     }
 
-    function updateStudent($id,$data){
+    function updateDepartment($id,$data){
         $this->db->where('id',$id);
         return $this->db->update($this->table, $data); 
     }
 
-    function delStudent($data){
+    function delDepartment($data){
         return $this->db->delete($this->table,$data);
     }
 

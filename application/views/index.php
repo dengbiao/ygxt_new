@@ -2,8 +2,8 @@
 	<head>
 		<title>中南大学研工部工资考核后台管理系统</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-        <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
-        <link rel="stylesheet" type="text/css" href="/static/css/admin.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/static/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/static/css/admin.css">
 	</head>
     <frameset rows="115,*,50" frameborder="0" scrolling="no" >
         <frame id="top" name="top" src="<?php echo site_url();?>/admin/top" frameborder="0" scrolling="no" />

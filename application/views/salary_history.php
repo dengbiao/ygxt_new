@@ -4,9 +4,9 @@
 		<title>历史数据查询</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 		<!-- stylesheets -->
-		<link rel="stylesheet" type="text/css" href="/static/css/reset.css" />
-		<link rel="stylesheet" type="text/css" href="/static/css/style.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="/static/css/salary.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/static/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/static/css/style.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/static/css/salary.css" />
 		<style type="text/css">
 
 		.page {border-top:1px solid #dfdfdf; padding-top: 10px; text-align: left; margin-bottom: 10px; font-size: 14px;}
@@ -17,15 +17,15 @@
 
 
 		</style>
-		<link id="color" rel="stylesheet" type="text/css" href="/static/css/colors/blue.css" />
+		<link id="color" rel="stylesheet" type="text/css" href="<?php echo base_url()?>/static/css/colors/blue.css" />
 		<!-- js (jquery) -->
-		<script src="/static/js/jquery-1.4.2.min.js" type="text/javascript"></script>
-		<!--[if IE]><script language="javascript" type="text/javascript" src="/static/js/excanvas.min.js"></script><![endif]-->
-		<script src="/static/js/jquery-ui-1.8.custom.min.js" type="text/javascript"></script>
-		<script src="/static/js/jquery.ui.selectmenu.js" type="text/javascript"></script>
-		<script src="/static/js/jquery.flot.min.js" type="text/javascript"></script>
-		<script src="/static/js/tiny_mce/tiny_mce.js" type="text/javascript"></script>
-		<script src="/static/js/tiny_mce/jquery.tinymce.js" type="text/javascript"></script>
+		<script src="<?php echo base_url()?>/static/js/jquery-1.4.2.min.js" type="text/javascript"></script>
+		<!--[if IE]><script language="javascript" type="text/javascript" src="<?php echo base_url()?>/static/js/excanvas.min.js"></script><![endif]-->
+		<script src="<?php echo base_url()?>/static/js/jquery-ui-1.8.custom.min.js" type="text/javascript"></script>
+		<script src="<?php echo base_url()?>/static/js/jquery.ui.selectmenu.js" type="text/javascript"></script>
+		<script src="<?php echo base_url()?>/static/js/jquery.flot.min.js" type="text/javascript"></script>
+		<script src="<?php echo base_url()?>/static/js/tiny_mce/tiny_mce.js" type="text/javascript"></script>
+		<script src="<?php echo base_url()?>/static/js/tiny_mce/jquery.tinymce.js" type="text/javascript"></script>
 
 	</head>
 	<body>
